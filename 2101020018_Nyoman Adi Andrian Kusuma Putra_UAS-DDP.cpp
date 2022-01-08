@@ -178,11 +178,11 @@ int main(){
             cout<<"Bayar : Rp.";
             cin>>bayar;
                 if(bayar<total){
-                cout<<"Uang Yang Anda Masukkan Kurang"<<endl;
-                goto retry;
+                    cout<<"Uang Yang Anda Masukkan Kurang"<<endl;
+                    goto retry;
                 }else{
-                kembali = bayar-total;
-                cout<<"Kembalian Anda : Rp."<<kembali<<endl;
+                    kembali = bayar-total;
+                    cout<<"Kembalian Anda : Rp."<<kembali<<endl;
                 }
         }else if(tot >= 50000){
             diskon = tot*0.1;
@@ -192,21 +192,21 @@ int main(){
             cout<<"Bayar : Rp.";
             cin>>bayar;
                 if(bayar<total){
-                cout<<"Uang Yang Anda Masukkan Kurang"<<endl;
-                goto retry;
+                    cout<<"Uang Yang Anda Masukkan Kurang"<<endl;
+                    goto retry;
                 }else{
-                kembali = bayar-total;
-                cout<<"Kembalian Anda : Rp."<<kembali<<endl;
+                    kembali = bayar-total;
+                    cout<<"Kembalian Anda : Rp."<<kembali<<endl;
                 }
         }else{
             cout<<"Bayar : Rp.";
             cin>>bayar;
                 if(bayar<tot){
-                cout<<"Uang Yang Anda Masukkan Kurang"<<endl;
-                goto retry;
+                    cout<<"Uang Yang Anda Masukkan Kurang"<<endl;
+                    goto retry;
                 }else{
-                kembali = bayar-tot;
-                cout<<"Kembalian Anda : Rp."<<kembali<<endl;
+                    kembali = bayar-tot;
+                    cout<<"Kembalian Anda : Rp."<<kembali<<endl;
                 }
         }
     cout<<"=============================================="<<endl;
