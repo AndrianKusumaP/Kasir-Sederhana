@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int pilih,tambah,jml,tot,diskon,bayar,kembali,total;
+int pilih,tambah,jml,tot,diskon,bayar,kembali,total,voucher;
 string menu[13] = {"Kopi Bali\t\t= Rp. 15.000","Americano\t\t= Rp. 18.000","Coffe Latte\t\t= Rp. 18.000","Piccolo\t\t= Rp. 18.000","Coffe Latte Caramel\t= Rp. 20.000","Coffe Latte Vanilla\t= Rp. 20.000","Red Velvet\t\t= Rp. 20.000","Matcha\t\t= Rp. 23.000","Moccacino\t\t= Rp. 23.000","Pisang Goreng\t= Rp. 10.000","Kentang Goreng\t= Rp. 15.000","Roti Bakar\t\t= Rp. 10.000","Jasuke\t\t= Rp. 15.000"};
 int harga[13] = {15000,18000,18000,18000,20000,20000,20000,23000,23000,10000,15000,10000,15000};
 
@@ -169,14 +169,20 @@ int main(){
             goto ulang;
     }selesai:
         cout<<"Total Biaya yang Harus Anda Bayar : Rp."<<tot<<endl;
-        retry:
         if(tot >= 100000){
             diskon = tot*0.15;
             total = tot-diskon;
             cout<<"Selamat Anda Mendapatkan Diskon 15%"<<endl;
             cout<<"Total Biaya yang Harus Anda Bayar Setelah Diskon : Rp."<<total<<endl;
-            cout<<"Bayar : Rp.";
-            cin>>bayar;
+            cout<<"Selamat Anda Juga Mendapatkan Voucher Potongan Harga Rp. 50.000\nApakah Anda Ingin Memakai Voucher?\n1. Iya\n2. Tidak\nPilihan = ";
+            cin>>voucher;
+            if(voucher == 1){
+                total = total-50000;
+                cout<<"Total Biaya yang Harus Anda Bayar Setelah Memakai Voucher : Rp."<<total<<endl;
+            }
+                retry:
+                cout<<"Bayar : Rp.";
+                cin>>bayar;
                 if(bayar<total){
                     cout<<"Uang Yang Anda Masukkan Kurang"<<endl;
                     goto retry;
